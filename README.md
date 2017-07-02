@@ -87,7 +87,7 @@ Use the identity form to create one-off actions:
 createAction('ADD_TODO')('Use Redux');
 ```
 
-`metaCreator` is an optional function that creates metadata for the payload. It receives the same arguments as the payload creator, but its result becomes the meta field of the resulting action. If `metaCreator` is undefined or not a function, the meta field is omitted.
+`metaCreator` is an optional argument that can either be an object or a function. An object will be directly used as meta value in the payload, whereas a function receives the same arguments as the payload creator and its return value will be used as meta value. If `metaCreator` is not defined, the meta property will be omitted.
 
 ### `createActions(?actionMap, ?...identityActions)`
 

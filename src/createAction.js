@@ -31,6 +31,8 @@ export default function createAction(type, payloadCreator = identity, metaCreato
 
     if (hasMeta) {
       action.meta = metaCreator(...args);
+    } else if (typeof metaCreator === 'object') {
+      action.meta = metaCreator;
     }
 
     return action;

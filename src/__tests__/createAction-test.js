@@ -73,6 +73,15 @@ describe('createAction()', () => {
       expect(isFSA(action)).to.be.true;
     });
 
+    it('allow metaCreator for an object', () => {
+      const cid = 5;
+      const actionCreator = createAction(type, null, { cid });
+      const payload = { foo: 'bar', cid };
+      const action = actionCreator(payload);
+      expect(action).to.deep.equal({ type, payload, meta: { cid } });
+      expect(isFSA(action)).to.be.true;
+    });
+
     it('sets error to true if payload is an Error object', () => {
       const actionCreator = createAction(type);
       const errObj = new TypeError('this is an error');
