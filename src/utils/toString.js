@@ -1,1 +1,1 @@
-export default value => value.toString();
+export default value => String(value);

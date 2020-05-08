@@ -1,7 +1,7 @@
 import invariant from 'invariant';
 import isFunction from './utils/isFunction';
 import identity from './utils/identity';
-import isNull from './utils/isNull';
+import isNil from './utils/isNil';
 
 export default function createAction(
   type,
@@ -9,18 +9,18 @@ export default function createAction(
   metaCreator
 ) {
   invariant(
-    isFunction(payloadCreator) || isNull(payloadCreator),
+    isFunction(payloadCreator) || isNil(payloadCreator),
     'Expected payloadCreator to be a function, undefined or null'
   );
 
   const finalPayloadCreator =
-    isNull(payloadCreator) || payloadCreator === identity
+    isNil(payloadCreator) || payloadCreator === identity
       ? identity
       : (head, ...args) =>
           head instanceof Error ? head : payloadCreator(head, ...args);
 
   const hasMeta = isFunction(metaCreator);
-  const typeString = type.toString();
+  const typeString = String(type);
 
   const actionCreator = (...args) => {
     const payload = finalPayloadCreator(...args);

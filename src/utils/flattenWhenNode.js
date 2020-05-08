@@ -11,7 +11,7 @@ export default predicate =>
   ) {
     function connectNamespace(type) {
       if (!partialFlatActionType) return type;
-      const types = type.toString().split(ACTION_TYPE_DELIMITER);
+      const types = String(type).split(ACTION_TYPE_DELIMITER);
       const partials = partialFlatActionType.split(ACTION_TYPE_DELIMITER);
       return []
         .concat(...partials.map(p => types.map(t => `${p}${namespace}${t}`)))
