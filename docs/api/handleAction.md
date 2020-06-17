@@ -12,11 +12,7 @@
 ### handleAction
 
 ```js
-handleAction(
-  type,
-  reducer | reducerMap = Identity,
-  defaultState,
-)
+handleAction(type, (reducer | reducerMap = Identity), defaultState);
 ```
 
 Wraps a reducer so that it only handles [Flux Standard Actions](https://github.com/redux-utilities/flux-standard-action#flux-standard-action) of a certain type.

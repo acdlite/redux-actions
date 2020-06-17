@@ -132,7 +132,11 @@ test('sets payload only when defined', () => {
 });
 
 test('bypasses payloadCreator if payload is an Error object', () => {
-  const actionCreator = createAction(type, () => 'not this', (_, meta) => meta);
+  const actionCreator = createAction(
+    type,
+    () => 'not this',
+    (_, meta) => meta
+  );
   const errObj = new TypeError('this is an error');
 
   const errAction = actionCreator(errObj, { foo: 'bar' });

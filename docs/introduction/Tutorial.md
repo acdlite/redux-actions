@@ -25,10 +25,10 @@ We are going to be building a simple counter, I recommend using something like [
 To begin we are going to need some scaffolding so here is some HTML to get started with. You may need to create a new file called main.js depending on where you are trying to set this tutorial up.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
     <script src="https://unpkg.com/redux-actions@latest/dist/redux-actions.js"></script>
   </head>

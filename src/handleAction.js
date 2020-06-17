@@ -20,8 +20,8 @@ export default function handleAction(type, reducer = identity, defaultState) {
 
   const [nextReducer, throwReducer] = isFunction(reducer)
     ? [reducer, reducer]
-    : [reducer.next, reducer.throw].map(
-        aReducer => (isNil(aReducer) ? identity : aReducer)
+    : [reducer.next, reducer.throw].map(aReducer =>
+        isNil(aReducer) ? identity : aReducer
       );
 
   return (state = defaultState, action) => {

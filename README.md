@@ -3,6 +3,7 @@
 **Unfortunately I ([timche](https://github.com/timche)) don't have the required time anymore to maintain this library and give it the necessary attention. Therefore I'm looking for maintainers that are willing to take care of this library on a long-term basis.**
 
 Requirements:
+
 - Having knowledge of this library and open-source in general.
 - Keeping the philosophy and goals of this library.
 - Taking care of issues and pull requests.
@@ -10,7 +11,7 @@ Requirements:
 - Knowing what's good for the library and what not (e.g. not accepting every suggestion) in order to maintain the library scope.
 - Having knowledge about the tooling (CI, build system, etc.) and the docs and maintaining them.
 
-It's also possible to join [redux-utilities](https://github.com/redux-utilities), an umbrella organization of complementing redux utility libraries like this one, to take care of few or all libraries. Please let me know if you are interested in that. 
+It's also possible to join [redux-utilities](https://github.com/redux-utilities), an umbrella organization of complementing redux utility libraries like this one, to take care of few or all libraries. Please let me know if you are interested in that.
 
 Please send me an email (adress on my profile) with the subject "redux-actions" and some information about you, if you want to be a maintainer.
 

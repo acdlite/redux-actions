@@ -177,12 +177,7 @@ test('accepts combined actions as action types in single reducer form', () => {
 
   const reducer = handleActions(
     {
-      [combineActions(increment, decrement)](
-        state,
-        {
-          payload: { amount }
-        }
-      ) {
+      [combineActions(increment, decrement)](state, { payload: { amount } }) {
         return { ...state, counter: state.counter + amount };
       }
     },
@@ -208,12 +203,7 @@ test('accepts combined actions as action types in the next/throw form', () => {
   const reducer = handleActions(
     {
       [combineActions(increment, decrement)]: {
-        next(
-          state,
-          {
-            payload: { amount }
-          }
-        ) {
+        next(state, { payload: { amount } }) {
           return { ...state, counter: state.counter + amount };
         },
 
