@@ -12,7 +12,7 @@ Requirements:
 
 It's also possible to join [redux-utilities](https://github.com/redux-utilities), an umbrella organization of complementing redux utility libraries like this one, to take care of few or all libraries. Please let me know if you are interested in that. 
 
-Please send me an email (adress on my profile) with the subject "redux-actions" and some information about you, if you want to be a maintainer.
+Please send me an email (address on my profile) with the subject "redux-actions" and some information about you, if you want to be a maintainer.
 
 # redux-actions
 
